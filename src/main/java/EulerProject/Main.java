@@ -33,10 +33,21 @@ public class Main {
         return pals.get(pals.size()-1);
     }
 
+    private static int problem5() {
+        int start = 1;
+        int end = 20;
+        int[] ns = new int[end];
+        for (int i=start;i<=end;i++)
+            ns[i-1] = i;
+        return PrimeFactors.findSmallestNumberThatDividesEveryNumInList(ns);
+    }
+
+
     public static void main(String[] args) {
 //        System.out.println(problem1());
 //        System.out.println(problem2());
 //        System.out.println(problem3());
-        System.out.println(problem4());
+//        System.out.println(problem4());
+        System.out.println(problem5());
     }
 }
