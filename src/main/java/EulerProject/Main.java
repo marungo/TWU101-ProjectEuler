@@ -42,12 +42,16 @@ public class Main {
         return PrimeFactors.findSmallestNumberThatDividesEveryNumInList(ns);
     }
 
+    private static int problem6() {
+        return SquareSum.DifferenceBetweenSquareOfSumsAndSumOfSquares(1,100);
+    }
 
     public static void main(String[] args) {
 //        System.out.println(problem1());
 //        System.out.println(problem2());
 //        System.out.println(problem3());
 //        System.out.println(problem4());
-        System.out.println(problem5());
+//        System.out.println(problem5());
+        System.out.println(problem6());
     }
 }

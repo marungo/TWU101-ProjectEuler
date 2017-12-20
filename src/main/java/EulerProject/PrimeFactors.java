@@ -2,20 +2,32 @@ package EulerProject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 public class PrimeFactors {
-    private static ArrayList<Integer> knownPrimes;
-
 
     private static boolean isPrime(int n) {
         int sqroot = (int) Math.sqrt(n);
-        for (int i=2;i<=sqroot;i++) {
+        for (int i=2;i<=sqroot+1;i++) {
             if (n%i == 0)
                 return false;
         }
         return true;
+    }
+
+    private static int findNthPrime(int n) {
+        int i = 0;
+        int j = 1;
+        while (i<n) {
+            j++;
+            if (isPrime(j)) {
+                System.out.print(j + " ");
+                if (i>0 && i%10 == 0)
+                    System.out.println();
+                i++;
+            }
+        }
+        System.out.println();
+        return j;
     }
 
     private static int maxInArrayList(ArrayList<Integer> ns) {
@@ -89,4 +101,8 @@ public class PrimeFactors {
         return maxInArrayList(findPrimeFactors(n));
     }
 
+    public static void main(String[] args) {
+        int fin = findNthPrime(10000);
+        System.out.println(fin);
+    }
 }

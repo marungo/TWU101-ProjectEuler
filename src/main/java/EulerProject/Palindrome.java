@@ -21,11 +21,7 @@ public class Palindrome {
 
     private static boolean isPalindrome(int n) {
         String s = Integer.toString(n);
-
-        String firstHalf = s.substring(0, s.length()/2);
-        String secondHalf = s.substring((s.length()+1)/2, s.length());
-
-        if (firstHalf.equals(reverse(secondHalf)))
+        if (s.equals(reverse(s)))
             return true;
         return false;
     }
